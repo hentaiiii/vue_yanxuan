@@ -17,4 +17,8 @@ export default {
 };
 </script>
 <style lang="stylus" scope>
+  .app
+    background-color #eee
+    // margin-bottom .51rem
+    height 100vh
 </style>

@@ -35,6 +35,8 @@ export default {
 .footContainer
   display flex
   position fixed
+  background-color #fff
+  z-index 999
   bottom  0
   width 100%
   height .45rem

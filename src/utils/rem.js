@@ -5,16 +5,16 @@
 var clientWidth = dom.clientWidth;
                   if(!clientWidth) return;
                   if(clientWidth>=1920){
-                    dom.style.fontSize = 100 * (clientWidth / 1920) + 'px';
+                    dom.style.fontSize = 2* 100 * (clientWidth / 1920) + 'px';
                   }else if(clientWidth>=1680){
-                    dom.style.fontSize = 100 * (clientWidth / 1680) + 'px';
+                    dom.style.fontSize = 2*100 * (clientWidth / 1680) + 'px';
                   }else if(clientWidth>=1440){
-                    dom.style.fontSize = 100 * (clientWidth / 1440) + 'px';
+                    dom.style.fontSize = 2*100 * (clientWidth / 1440) + 'px';
                   }else if(clientWidth>=1280){
-                    dom.style.fontSize = 100 * (clientWidth / 1280) + 'px';
+                    dom.style.fontSize = 2* 100 * (clientWidth / 1280) + 'px';
                   }
                   else if(clientWidth>=1263){
-                    dom.style.fontSize = 100 * (clientWidth / 1263) + 'px';
+                    dom.style.fontSize =2* 100 * (clientWidth / 1263) + 'px';
                   }else{
                     dom.style.fontSize = 2 *100 * (clientWidth / 750) + 'px';
                   }
