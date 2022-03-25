@@ -9,7 +9,9 @@ import '@/utils/vant'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.min.css'
 import VueLazyLoad from 'vue-lazyload' // 图片的懒加载
+import waterfall from 'vue-waterfall2' // 瀑布流
 
+Vue.use(waterfall)
 Vue.use(VueAwesomeSwiper)
 Vue.prototype.$api = api // 挂载接口函数
 Vue.use(VueLazyLoad,{

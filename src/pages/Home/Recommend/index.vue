@@ -1,6 +1,6 @@
 <!-- 推荐组件 -->
 <template>
-  <div>
+  <div class="homeContent">
     <!-- 轮播 -->
     <swiper
       :options="swiperOption"
@@ -136,98 +136,100 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-.swiper
-  width 100%
-  height 1.85rem
-  img
+.homeContent
+  margin-top .86rem
+  .swiper
     width 100%
     height 1.85rem
-  >>> .swiper-pagination-bullet
-    width 0.2rem
-    height 0.02rem
+    img
+      width 100%
+      height 1.85rem
+    >>> .swiper-pagination-bullet
+      width 0.2rem
+      height 0.02rem
+      background-color #fff
+  .iconBox
     background-color #fff
-.iconBox
-  background-color #fff
-  width 100%
-  height 0.36rem
-  display flex
-  justify-content space-around
-  .iconItem
-    flex 1
-    text-align center
-    img
-      width 0.16rem
-      height 0.16rem
-      border-radius 50%
-      padding-top 0.06rem
-      padding-right 0.06rem
-    span
-      font-size 0.12rem
-.gridBox
-  .gradItem
-    .gridImg
-      width 0.55rem
-      height 0.55rem
-      padding-bottom 0.1rem
-      border-radius 0.1rem
-      background-color #f4f4f4
-    span
-      color rgb(51, 51, 51)
-      font-size 0.12rem
-      line-height 0.18rem
-.firstOrder
-  display flex
-  flex-direction column
-  margin-bottom .1rem
-  .floorTop
     width 100%
-    height 1.6rem
-    img
+    height 0.36rem
+    display flex
+    justify-content space-around
+    .iconItem
+      flex 1
+      text-align center
+      img
+        width 0.16rem
+        height 0.16rem
+        border-radius 50%
+        padding-top 0.06rem
+        padding-right 0.06rem
+      span
+        font-size 0.12rem
+  .gridBox
+    .gradItem
+      .gridImg
+        width 0.55rem
+        height 0.55rem
+        padding-bottom 0.1rem
+        border-radius 0.1rem
+        background-color #f4f4f4
+      span
+        color rgb(51, 51, 51)
+        font-size 0.12rem
+        line-height 0.18rem
+  .firstOrder
+    display flex
+    flex-direction column
+    margin-bottom .1rem
+    .floorTop
       width 100%
       height 1.6rem
-.freshmanModule
-  background-color #fff
-  overflow hidden
-  .moduleTitle
-    height .45rem
-    line-height .45rem
-    width 100%
-    padding 0 .15rem
-    text-align center
-    font-size .16rem
-  >div
-    width 1.715rem
-    height 2.17rem
-  .moduleLeft
-    float left
-    margin-left .15rem
-    margin-right .02rem
-    background-color #f9e9cf
-    .moduleLeftTitle
-      padding-top .15rem
-      padding-left .15rem
-      font-size .16rem
-      color #333
-    .moduleLeftImg
-      width 100%
-      height 1.715rem
-      position relative
       img
-        position absolute
-        // top 0
-        // left 0
-        // right 0
-        // bottom 0
-        // margin auto
-        width 1.29rem
-        height 1.29rem
-        left 50%
-        top 50%
-        transform: translate(-50%, -50%)
-  .moduleRight
-    float left
-.popular
-  background-color #fff
-  padding .05rem .15rem .15rem .13rem
-  display flex
+        width 100%
+        height 1.6rem
+  .freshmanModule
+    background-color #fff
+    overflow hidden
+    .moduleTitle
+      height .45rem
+      line-height .45rem
+      width 100%
+      padding 0 .15rem
+      text-align center
+      font-size .16rem
+    >div
+      width 1.715rem
+      height 2.17rem
+    .moduleLeft
+      float left
+      margin-left .15rem
+      margin-right .02rem
+      background-color #f9e9cf
+      .moduleLeftTitle
+        padding-top .15rem
+        padding-left .15rem
+        font-size .16rem
+        color #333
+      .moduleLeftImg
+        width 100%
+        height 1.715rem
+        position relative
+        img
+          position absolute
+          // top 0
+          // left 0
+          // right 0
+          // bottom 0
+          // margin auto
+          width 1.29rem
+          height 1.29rem
+          left 50%
+          top 50%
+          transform: translate(-50%, -50%)
+    .moduleRight
+      float left
+  .popular
+    background-color #fff
+    padding .05rem .15rem .15rem .13rem
+    display flex
 </style>

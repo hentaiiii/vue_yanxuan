@@ -20,6 +20,7 @@ export default {
 <style lang="stylus" scoped>
 .homeHeader
   background-color #fff
+  height .4rem
   display flex
   justify-content space-between
   font-size 0.12rem

@@ -1,44 +1,46 @@
 <!-- 首页 -->
 <template>
   <div class="homeContainer">
-    <Header>
-      <template v-slot:headerLeft>
-        <a href="/" class="logo">
-          <img src="@/static/images/logo.png" alt="" />
-        </a>
-      </template>
-      <template v-slot:headerMiddle>
-        <div class="headerSearch">
-          <i class="iconfont icon-search"></i>
-          <span>搜索商品, 共111926款好物</span>
-        </div>
-      </template>
-      <template v-slot:headerRight>
-        <button class="loginBtn">登录</button>
-      </template>
-    </Header>
-    <!-- nav导航栏 -->
-    <div class="scrollWrap" ref="scrollWrap">
-      <ul class="contentWrap" v-if="homeList.kingKongModule">
-        <li
-          class="recommend"
-          :class="{ active: currentIndex === -1 }"
-          @click="changeNav($event, -1)"
-          ref="recommendRef"
-        >
-          推荐
-        </li>
-        <li
-          v-for="(item, index) in homeList.kingKongModule.kingKongList"
-          :key="item.picUrl"
-          @click="changeNav($event, index)"
-          :class="{ active: currentIndex === index }"
-          ref="otherNavRef"
-        >
-          {{ item.text }}
-        </li>
-      </ul>
-      <ul v-else></ul>
+    <div class="homeHeaderFix">
+      <Header>
+        <template v-slot:headerLeft>
+          <a href="/" class="logo">
+            <img src="@/static/images/logo.png" alt="" />
+          </a>
+        </template>
+        <template v-slot:headerMiddle>
+          <div class="headerSearch">
+            <i class="iconfont icon-search"></i>
+            <span>搜索商品, 共111926款好物</span>
+          </div>
+        </template>
+        <template v-slot:headerRight>
+          <button class="loginBtn">登录</button>
+        </template>
+      </Header>
+      <!-- nav导航栏 -->
+      <div class="scrollWrap" ref="scrollWrap">
+        <ul class="contentWrap" v-if="homeList.kingKongModule">
+          <li
+            class="recommend"
+            :class="{ active: currentIndex === -1 }"
+            @click="changeNav($event, -1)"
+            ref="recommendRef"
+          >
+            推荐
+          </li>
+          <li
+            v-for="(item, index) in homeList.kingKongModule.kingKongList"
+            :key="item.picUrl"
+            @click="changeNav($event, index)"
+            :class="{ active: currentIndex === index }"
+            ref="otherNavRef"
+          >
+            {{ item.text }}
+          </li>
+        </ul>
+        <ul v-else></ul>
+      </div>
     </div>
     <Recommend />
   </div>
@@ -127,28 +129,35 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .homeContainer
-  .scrollWrap
-    // position relative
-    height 0.3rem
-    font-size 0.14rem
-    padding 0 0.15rem
-    overflow hidden
-    white-space nowrap
-    background-color #fff
-    .contentWrap
-      // position absolute
-      // top 0
-      float left
-      display flex
+  .homeHeaderFix
+    position fixed
+    top 0
+    width 100%
+    height .86rem
+   
+    z-index 999
+    .scrollWrap
+      // position relative
       height 0.3rem
-      li
-        box-sizing border-box
+      font-size 0.14rem
+      padding 0 0.15rem
+      overflow hidden
+      white-space nowrap
+      background-color #fff
+      .contentWrap
+        // position absolute
+        // top 0
+        float left
+        display flex
         height 0.3rem
-        line-height 0.3rem
-        padding 0 0.08rem
-        margin-left 0.24rem
-        &.active
-          border-bottom 1px solid red
-        &.recommend
-          margin-left 0
+        li
+          box-sizing border-box
+          height 0.3rem
+          line-height 0.3rem
+          padding 0 0.08rem
+          margin-left 0.24rem
+          &.active
+            border-bottom 1px solid red
+          &.recommend
+            margin-left 0
 </style>
